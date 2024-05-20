@@ -4,7 +4,6 @@ A diffusion probabilistic model (which we will call a “diffusion model” for 
 
 <p align="center">
   <img src="./diffusion.gif"/>
-  <img alt="gif of the denoising process">
 </p>
 
 ## What is a diffusion model?
@@ -42,7 +41,7 @@ As can be seen, a U-Net model first downsamples the input (i.e. makes the input 
 
 ### Deep Unsupervised Learning using Nonequilibrium Thermodynamics
 > https://arxiv.org/abs/1503.03585
-> (2015 paper which originally introduced this technique coming from statistical physics)
+>> (2015 paper which originally introduced this technique coming from statistical physics)
 
 - A central problem in machine learning involves modeling complex data-sets using highly flexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable. Here, we develop an approach that simultaneously achieves both flexibility and tractability. ==**The essential idea, inspired by non-equilibrium statistical physics, is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process. We then learn a reverse diffusion process that restores structure in data, yielding a highly flexible and tractable generative model of the data==.** This approach allows us to rapidly learn, sample from, and evaluate probabilities in deep generative models with thousands of layers or time steps, as well as to compute conditional and posterior probabilities under the learned model.
 
@@ -50,7 +49,7 @@ As can be seen, a U-Net model first downsamples the input (i.e. makes the input 
 
 ### Denoising Diffusion Probabilistic Models 
 > https://arxiv.org/abs/2006.11239
-> (Second influential paper for diffusion models published in 2020 which introduced few groundbreaking changes which led to huge jump in quality)
+>> (Second influential paper for diffusion models published in 2020 which introduced few groundbreaking changes which led to huge jump in quality)
 
 - This paper laid out three things the network in the reverse process could predict 
 1. predicting the mean of the noise at each time step 
@@ -67,8 +66,8 @@ You may be wondering why do we just predict the mean and not the variance in the
 ![Algorithm 2](assets/DDPM_Algorithm_2.png)
 
 ### Improved Denoising Diffusion Probabilistic Models
->https://arxiv.org/abs/2102.09672
-> OpenAI's first paper on diffusion models with major improvements
+> https://arxiv.org/abs/2102.09672
+>> OpenAI's first paper on diffusion models with major improvements
 
 - The choice of fixing the variance was rethought by the OpenAI authors in their first paper and they eventually decided to learn the variance too because it would lead to improvements in the log likelihoods
 
@@ -94,7 +93,7 @@ You may be wondering why do we just predict the mean and not the variance in the
 
 ### Diffusion Models Beat GANs on Image Synthesis
 > https://arxiv.org/abs/2105.05233
-> OpenAI's second paper on diffusion models with major improvements
+>> OpenAI's second paper on diffusion models with major improvements
 
 - In this paper from, the authors from OpenAI heavily improved the overall outcome by improving the architecture 
 - They made the following updates:
@@ -114,17 +113,17 @@ Adaptive Group Normalization is just a fancy name for the idea of incorporating 
 - Both processes are done iteratively and the architecture of the model follows a U-Net
 
 ### Refrences:
-https://arxiv.org/abs/1503.03585
-https://arxiv.org/abs/2006.11239
-https://arxiv.org/pdf/2102.09672
-https://arxiv.org/pdf/2105.05233
-https://github.com/huggingface/blog/blob/main/annotated-diffusion.md
-https://lilianweng.github.io/posts/2021-07-11-diffusion-models/
-https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/
-https://www.chenyang.co/diffusion.html
-https://github.com/diff-usion/Awesome-Diffusion-Models
-https://nonint.com/2022/10/31/grokking-diffusion-models
-https://www.youtube.com/watch?v=I1sPXkm2NH4
-https://www.youtube.com/watch?v=a4Yfz2FxXiY
-https://www.youtube.com/watch?v=HoKDTa5jHvg
-https://www.youtube.com/watch?v=TBCRlnwJtZU
+- https://arxiv.org/abs/1503.03585
+- https://arxiv.org/abs/2006.11239
+- https://arxiv.org/pdf/2102.09672
+- https://arxiv.org/pdf/2105.05233
+- https://github.com/huggingface/blog/blob/main/annotated-diffusion.md
+- https://lilianweng.github.io/posts/2021-07-11-diffusion-models/
+- https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/
+- https://www.chenyang.co/diffusion.html
+- https://github.com/diff-usion/Awesome-Diffusion-Models
+- https://nonint.com/2022/10/31/grokking-diffusion-models
+- https://www.youtube.com/watch?v=I1sPXkm2NH4
+- https://www.youtube.com/watch?v=a4Yfz2FxXiY
+- https://www.youtube.com/watch?v=HoKDTa5jHvg
+- https://www.youtube.com/watch?v=TBCRlnwJtZU
